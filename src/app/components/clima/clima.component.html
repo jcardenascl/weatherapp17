@@ -1,0 +1,28 @@
+<div class="content">
+    <div class="inner clima-content">
+        <h1>Weather app</h1>
+        <h3>Consulta el clima de tu ciudad</h3>
+        <app-clima-search></app-clima-search>
+        <!-- @if (true) { -->
+        <!-- <app-clima-details [weatherData]="store.weather"></app-clima-details> -->
+        <!-- } -->
+        <pre>
+            {{ store.weather() | json }}
+        </pre>
+        <pre>
+            {{ store.weather().current | json }}
+        </pre>
+        <pre>
+            {{ store.isLoading() }}
+        </pre>
+        <pre>
+            {{ store.ciudad() }}
+        </pre>
+    </div>
+    <div class="inner historial-content">
+        HISTORIAL
+    </div>
+    <div class="inner">
+        FAVORITOS
+    </div>
+</div>
